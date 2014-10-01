@@ -7,7 +7,7 @@ main.__container.main__articles(role="main")
                 time(datetime="#{ new Date(date) }", title-face="#{ date }", title-dir)= endate
         != yield
         a.__button-solid-sexy(href="http://twitter.com/intent/tweet?text=#{ title }&url=#{ site_url }/notes/#{ shorten }&via=#{ twitter_account }&related=#{ twitter_account }", dir="ltr", onclick="window.open(this.href, 'tweetwindow', 'width=600, height=450'); return false;") Tweet 
-        span#tweets
+            span#tweets
         != partial("../_require/article-nav")
         if disqus
             != partial("../_require/comments")
