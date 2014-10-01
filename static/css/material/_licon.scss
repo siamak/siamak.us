@@ -1,0 +1,39 @@
+/*
+    {Licon} is a simple, useful and lightness pack-icon that made with Pure CSS3 by Siamak Mokhtari (@sia_mac) at @FictionTeam.
+    It has Sass version so it can easily be modified and merged into modern projects. 
+    It provides all the useful icons for good design without adding any images or fonts. 
+
+    Licon on github: [https://github.com/siamakmokhtari/licon/]
+*/
+
+$size:32px; // licon on playground! (base on 32px).
+
+[class^="licon-"] {
+    display: inline-block; /* block, inline-block, inline-flex, table */
+    vertical-align: bottom;
+    position: relative;
+    font-style:normal;
+    &:before, &:after{
+        content:'';pointer-events: none;
+    }
+}
+
+.licon-clock{
+    width: $size;height:$size;border:$size/16 solid $lighter-gray;@include border-radius(100%);@include transform(scale(.7));margin-left: $baseline / 8;
+    &:before{
+        position: absolute;width: $size/16;height:$size/3;background-color:$lighter-gray;bottom:$size/2.5;left:$size/2 - $size/14;@include transform(rotate(0deg));
+    }
+    &:after{
+        position: absolute;width: $size/16;height:$size/4;background-color:$lighter-gray;bottom:$size/4;left:$size/2 - $size/6;@include transform(rotate(90deg));
+    }
+}
+
+.licon-arrowleft{
+    width: $size;height:$size;@include transform(scale(.7));
+    &:after{
+        position: absolute;width: $size/16;height: $size/2;right: $size/2;top: $size/4 + $size/16;background-color: $highlight;display: block;@include transform(rotate(-45deg));
+    }
+    &:before{
+        position: absolute;width: $size/16;height: $size/2;right: $size/2;top: 0;background-color: $highlight;display: block;@include transform(rotate(45deg));
+    }
+}

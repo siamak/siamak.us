@@ -1,0 +1,13 @@
+main.__container.main__articles(role="main")
+    article.grid__col.grid__col--one-of-one.grid--no-gutter.note-list(class="#{ featured===true ? 'featured' : '' }")
+        header
+            h2= title
+            h4
+                i.licon-clock
+                time(datetime="#{ new Date(date) }", title-face="#{ date }", title-dir)= endate
+        != yield
+        a.__button-solid-sexy(href="http://twitter.com/intent/tweet?text=#{ title }&url=#{ site_url }/notes/#{ shorten }&via=#{ twitter_account }&related=#{ twitter_account }", dir="ltr", onclick="window.open(this.href, 'tweetwindow', 'width=600, height=450'); return false;") Tweet 
+        span#tweets
+        != partial("../_require/article-nav")
+        if disqus
+            != partial("../_require/comments")

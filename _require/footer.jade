@@ -1,0 +1,48 @@
+footer.__footer.grid
+
+    section.grid__col.grid__col--one-of-one.grid--no-gutter.grid__col--span-all.huge__size
+        for quote in public.quotes._data
+            blockquote(dir="ltr", class="_quote-popular")= quote.note
+                span.quote-owner__gray= quote.author
+
+    section.grid__col.grid__col--one-of-two.grid__col--bl.grid__col--justify.grid__col--am
+        article(dir="ltr", class="__small") 
+            div
+                | It's an open source project. Designed, Maintained by 
+                a(href="http://twitter.com/sia_mac", target="_blank", title="Siamak on twitter") Siamak Mokhtari
+                |  with 
+                a(href="http://harpjs.com/", target="_blank", title="The static web server with built-in preprocessing") Harpjs
+                |  and 
+                i DollarDollar($$.)
+                |  javascript framework also 
+                a(href="http://github.com/siamakmokhtari/licon", target="_blank") Licon 
+                |  package for icons. Hosted by 
+                a(href="http://heroku.com", target="_blank") Github
+                | . under license 
+                a(href="http://siamak.mit-license.org", target="_blank") MIT
+                | . You can use this everywhere. 
+                a(href="http://github.com/siamakmokhtari/siamak.us", target="_blank") Check out on Github
+                | . 
+                a(href="https://twitter.com/search?q=%23minimal&src=typd&mode=photos", target="_blank") #Minimal
+                | , 
+                a(href="http://jade-lang.com", target="_blank") jade
+                | , 
+                a(href="http://sass-lang.com", target="_blank") Sass
+                | , 
+                a(href="http://gulpjs.com", target="_blank") gulpjs
+                | .
+    
+    section.grid__col.grid__col--one-of-two.grid__col--justify.grid__col--am
+        article(dir="ltr", class="__small") 
+            div
+                &copy; 2014 • I'm Siamak Mokhtari based on 
+                a(href="http://en.wikipedia.org/wiki/Tehran", target="_blank" title="Tehran on Wikipedia") Tehran, Iran. 
+                | Front-End Developer & Web design Expert. Nowadays I'm coding at 
+                a(href="http://netbarg.com/", target="_blank" title="نت‌برگ") NetBarg.com
+                |  and Founder, Front-end Developer at 
+                a(href="http://twitter.com/fictionteam", target="_blank", title="FictionTeam on twitter") @FictionTeam
+                | . Follow me on: 
+                a(href="http://twitter.com/sia_mac", target="_blank", title="Siamak on twitter") Twitter
+                |  & 
+                a(href="http://github.com/siamakmokhtari", target="_blank", title="Siamak on github") Github
+                | .

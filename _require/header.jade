@@ -1,0 +1,38 @@
+meta(charset="utf-8")
+title= locals.title ? title + " | " + site_title : site_title
+meta(name="viewport", content="initial-scale=1.0, user-scalable=no, width=device-width, minimal-ui")
+meta(name="author", content="#{ author }")
+
+meta(name="description", content="#{ description }")
+meta(name="keywords", content="#{ keywords }")
+meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+meta(name="apple-mobile-web-app-capable", content="yes")
+
+link(rel="stylesheet", href="/static/css/main.css")
+link(rel='shortcut icon', href='/static/img/favicon.jpg')
+link(rel="apple-touch-icon", href="/static/img/touch-icon-iphone-retina.jpg")
+link(rel="apple-touch-icon", sizes="76x76", href="/static/img/touch-icon-ipad.jpg")
+link(rel="apple-touch-icon", sizes="120x120", href="/static/img/touch-icon-iphone-retina.jpg")
+link(rel="apple-touch-icon", sizes="152x152", href="/static/img/touch-icon-ipad-retina.jpg")
+meta(property="og:site_name", content=site_title)
+meta(property='og:description', content=description)
+meta(property='og:type', content=site_type)
+
+if current.path[0] === "index"
+    meta(property="og:title", content=site_title)
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:description", content=description)
+    meta(name="twitter:image", content="#{site_url}/static/img/favicon.jpg")
+else
+ if current.path[0] === "notes"
+    meta(property='og:title', content=locals.title ? title + " | " + site_title : site_title)
+ if current.path[0] === "index"
+    meta(property='og:url', content=site_url)
+ else
+  if current.path[0] === "notes"
+    meta(property='og:url', content=site_url + "/notes/" + current.path[1])
+    meta(property='og:image', content="#{site_url}/static/img/favicon.jpg")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:description", content=description)
+    meta(name="twitter:image", content="#{site_url}/static/img/favicon.jpg")
+    meta(name='twitter:site', content="@" + twitter_account)

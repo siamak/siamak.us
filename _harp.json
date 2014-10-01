@@ -1,0 +1,18 @@
+{
+	"globals": {
+		"site_title": "نوشته های سیامک مختاری",
+		"description": "هر آن چیزی که در زندگی شخصی ام می گذرد و من آنها را به اشتراک می گذارم.",
+		"nickname": "سیامک مختاری",
+		"site_url": "http://siamak.us",
+		"keywords": "سیامک مختاری,سیامک,مختاری,Siamak Mokhtari,Siamak,Mokhtari,FictionTeam,NetBarg",
+		"site_type": "website",
+		"includes": true,
+		"twitter_account": "sia_mac",
+		"github_account": "siamakmokhtari",
+		"author": "Siamak Mokhtari (@sia_mac)",
+		"profile_image": "a4673ef019dea5e2bbd56691abd7f354.png",
+		"disqus": "siamakmokhtari",
+		"analytics": "UA-51694552-2",
+		"comment_name": "ادامه نوشته..."
+	}
+}
