@@ -1,6 +1,6 @@
 {
 	"globals": {
-		"site_title": "نوشته های سیامک مختاری",
+		"site_title": "نوشته های سیامک مختاری | Siamak Mokhtari",
 		"description": "هر آن چیزی که در زندگی شخصی ام می گذرد و من آنها را به اشتراک می گذارم.",
 		"nickname": "سیامک مختاری",
 		"site_url": "http://siamak.us",
@@ -9,7 +9,8 @@
 		"includes": true,
 		"twitter_account": "sia_mac",
 		"github_account": "siamakmokhtari",
-		"author": "Siamak Mokhtari (@sia_mac)",
+		"instagram_account": "siamakmokhtari",
+		"author": "Siamak Mokhtari",
 		"profile_image": "a4673ef019dea5e2bbd56691abd7f354.png",
 		"disqus": "siamakmokhtari",
 		"analytics": "UA-51694552-2",
