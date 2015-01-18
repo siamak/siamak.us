@@ -1,12 +1,10 @@
 ﻿$(document).ready(function() {
-	$('body').click(function(){
-		if(!$(this).hasClass('open')){
+	$('.trigger_down, .part--step_one').click(function(){
 			$('.trigger_down').fadeOut();
 			$('.part--step_one').addClass('out');
 			$('.part--step_cover').addClass('show');
 			$('.part--step_content').addClass('run');
 			$(this).addClass('open');
-		}
 	});
 });
 	function d(){  
