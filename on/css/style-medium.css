@@ -1,0 +1,104 @@
+h1 {
+  font-weight: 700; }
+
+h2 {
+  font-weight: 700; }
+
+h3 {
+  font-weight: 700; }
+
+h4 {
+  font-weight: 700; }
+
+h5 {
+  font-weight: 700; }
+
+h6 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.875rem;
+  margin-top: 2.90625rem;
+  margin-bottom: 1.9375rem;
+  letter-spacing: -0.16146rem;
+  word-spacing: -0.09688rem; }
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.9375rem;
+  margin-top: 3.875rem;
+  margin-bottom: 1.9375rem;
+  letter-spacing: -0.13839rem;
+  word-spacing: -0.09688rem; }
+
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.9375rem;
+  margin-top: 1.9375rem;
+  margin-bottom: 1.9375rem;
+  word-spacing: -0.09688rem; }
+
+h4 {
+  font-size: 1.0625rem;
+  line-height: 1.9375rem;
+  margin-top: 1.9375rem;
+  margin-bottom: 0.48438rem;
+  letter-spacing: -0.08807rem;
+  word-spacing: -0.09688rem; }
+
+/*
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+/* Basic */
+body, input, select, textarea {
+  font-size: 12pt; }
+
+/* Spotlight */
+.spotlight {
+  background-attachment: scroll;
+  height: auto; }
+  .spotlight .image.main {
+    display: block;
+    margin: 0;
+    max-height: 40vh;
+    overflow: hidden; }
+  .spotlight .content {
+    background-color: #3c342e;
+    border-width: 0 !important;
+    border-top-width: 0.35em !important;
+    bottom: auto !important;
+    left: auto !important;
+    padding: 4.5em 2.5em 2.5em 2.5em !important;
+    position: relative;
+    right: auto !important;
+    text-align: center;
+    top: auto !important;
+    width: 100% !important; }
+  .spotlight .goto-next {
+    display: none; }
+
+/* Wrapper */
+.wrapper {
+  padding: 4.5em 2.5em 2.5em 2.5em; }
+
+/* Banner */
+#banner {
+  background-attachment: scroll; }
+  #banner .goto-next {
+    height: 7em; }
+  #banner .content {
+    padding: 9em 0;
+    text-align: center; }
+    #banner .content header {
+      display: block;
+      margin: 0 0 2em 0;
+      text-align: center; }
+    #banner .content .image {
+      margin: 0; }
+
+/* Footer */
+#footer {
+  padding: 4.5em 0; }

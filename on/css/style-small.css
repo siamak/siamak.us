@@ -1,0 +1,200 @@
+h1 {
+  font-weight: 700; }
+
+h2 {
+  font-weight: 700; }
+
+h3 {
+  font-weight: 700; }
+
+h4 {
+  font-weight: 700; }
+
+h5 {
+  font-weight: 700; }
+
+h6 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.875rem;
+  margin-top: 2.90625rem;
+  margin-bottom: 1.9375rem;
+  letter-spacing: -0.16146rem;
+  word-spacing: -0.09688rem; }
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.9375rem;
+  margin-top: 3.875rem;
+  margin-bottom: 1.9375rem;
+  letter-spacing: -0.13839rem;
+  word-spacing: -0.09688rem; }
+
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.9375rem;
+  margin-top: 1.9375rem;
+  margin-bottom: 1.9375rem;
+  word-spacing: -0.09688rem; }
+
+h4 {
+  font-size: 1.0625rem;
+  line-height: 1.9375rem;
+  margin-top: 1.9375rem;
+  margin-bottom: 0.48438rem;
+  letter-spacing: -0.08807rem;
+  word-spacing: -0.09688rem; }
+
+/*
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+/* Basic */
+body, input, select, textarea {
+  font-size: 12pt; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+h4 {
+  font-size: 1em; }
+
+/* Section/Article */
+header p br {
+  display: none; }
+header h2 + p {
+  font-size: 1em; }
+header h3 + p {
+  font-size: 1em; }
+header h4 + p,
+header h5 + p,
+header h6 + p {
+  font-size: 0.9em; }
+header.major {
+  margin: 0 0 2em 0; }
+
+/* Goto Next */
+.goto-next:before {
+  height: 0.8em;
+  margin: -0.4em 0 0 -0.6em;
+  width: 1.2em; }
+
+/* Spotlight */
+.spotlight {
+  box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.25); }
+  .spotlight .image.main {
+    max-height: 60vh; }
+  .spotlight .content {
+    border-top-width: 0.2em !important;
+    padding: 3.25em 1.5em 1.25em 1.5em !important; }
+
+/* Wrapper */
+.wrapper {
+  padding: 3.25em 1.5em 1.25em 1.5em; }
+
+/* Header */
+#header {
+  display: none; }
+
+/* Banner */
+#banner {
+  box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.25);
+  min-height: calc(100vh - 44px); }
+  #banner:before {
+    height: calc(100vh - 44px); }
+  #banner .content {
+    padding: 4.0625em 1.5em 4.875em 1.5em; }
+    #banner .content header h2 {
+      font-size: 1.5em; }
+    #banner .content .image {
+      height: 9em;
+      width: 9em; }
+
+/* Layers */
+#skel-layers-wrapper {
+  padding-top: 44px !important; }
+
+#titleBar {
+  background: #3c342e;
+  box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125); }
+  #titleBar .title {
+    color: white;
+    display: block;
+    font-weight: 300;
+    height: 44px;
+    line-height: 44px;
+    text-align: center; }
+  #titleBar .toggle {
+    text-decoration: none;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 90px; }
+    #titleBar .toggle:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important; }
+    #titleBar .toggle:before {
+      background: #a97d04;
+      color: rgba(255, 255, 255, 0.5);
+      content: '\f0c9';
+      display: block;
+      font-size: 18px;
+      height: 44px;
+      left: 0;
+      line-height: 44px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 54px; }
+
+#navPanel {
+  background: #362f2a;
+  padding: 0.75em 1.25em; }
+  #navPanel .link {
+    border: 0;
+    border-top: solid 1px rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.75);
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    text-decoration: none; }
+    #navPanel .link:hover {
+      color: inherit !important; }
+    #navPanel .link:first-child {
+      border-top: 0; }
+    #navPanel .link.depth-0 {
+      color: white;
+      font-weight: 300; }
+    #navPanel .link .indent-1 {
+      display: inline-block;
+      width: 1.25em; }
+    #navPanel .link .indent-2 {
+      display: inline-block;
+      width: 2.5em; }
+    #navPanel .link .indent-3 {
+      display: inline-block;
+      width: 3.75em; }
+    #navPanel .link .indent-4 {
+      display: inline-block;
+      width: 5em; }
+    #navPanel .link .indent-5 {
+      display: inline-block;
+      width: 6.25em; }
+
+/* Footer */
+table {
+  width: 30rem; }
+
+#footer {
+  padding: 3.25em 1.5em; }

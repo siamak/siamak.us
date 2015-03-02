@@ -1,0 +1,113 @@
+h1 {
+  font-weight: 700; }
+
+h2 {
+  font-weight: 700; }
+
+h3 {
+  font-weight: 700; }
+
+h4 {
+  font-weight: 700; }
+
+h5 {
+  font-weight: 700; }
+
+h6 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.875rem;
+  margin-top: 2.90625rem;
+  margin-bottom: 1.9375rem;
+  letter-spacing: -0.16146rem;
+  word-spacing: -0.09688rem; }
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.9375rem;
+  margin-top: 3.875rem;
+  margin-bottom: 1.9375rem;
+  letter-spacing: -0.13839rem;
+  word-spacing: -0.09688rem; }
+
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.9375rem;
+  margin-top: 1.9375rem;
+  margin-bottom: 1.9375rem;
+  word-spacing: -0.09688rem; }
+
+h4 {
+  font-size: 1.0625rem;
+  line-height: 1.9375rem;
+  margin-top: 1.9375rem;
+  margin-bottom: 0.48438rem;
+  letter-spacing: -0.08807rem;
+  word-spacing: -0.09688rem; }
+
+/*
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+/* Basic */
+html, body {
+  min-width: 320px; }
+
+body, input, select, textarea {
+  font-size: 12pt; }
+
+/* List */
+ul.actions {
+  margin: 0 0 2em 0; }
+  ul.actions li {
+    display: block;
+    padding: 1em 0 0 0;
+    text-align: center;
+    width: 100%; }
+    ul.actions li:first-child {
+      padding-top: 0; }
+    ul.actions li > * {
+      margin: 0 !important;
+      width: 100%; }
+  ul.actions.small li {
+    padding: 0.5em 0 0 0; }
+    ul.actions.small li:first-child {
+      padding-top: 0; }
+
+/* Button */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+  padding: 0 1.4em; }
+
+/* Spotlight */
+.spotlight .image.main {
+  max-height: 50vh; }
+.spotlight .content {
+  padding: 3em 1.25em 1em 1.25em !important; }
+
+/* Wrapper */
+.wrapper {
+  padding: 3em 1.25em 1em 1.25em; }
+
+/* Banner */
+#banner .content {
+  padding: 3em 1.5625em 5.25em 1.5625em; }
+
+/* Footer */
+table {
+  width: auto !important; }
+
+#footer {
+  padding: 3em 1.25em; }
+  #footer .copyright {
+    line-height: inherit; }
+    #footer .copyright li {
+      border-left: 0;
+      display: block;
+      margin: 0;
+      padding: 0; }
