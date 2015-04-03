@@ -48,7 +48,7 @@
     @extend %one-fifth;
 }
 .note-list{
-  margin-bottom: $baseline * 1.5;
+    margin-bottom: $baseline * 2.5;
 }
 .#{$grid-column-namespace} {
     display: inline-block;
@@ -89,7 +89,11 @@
 		text-align: justify;
     }
 
-    @media (max-width: $breakpoint-medium) {
+    @media (max-width: $breakpoint-large) {
+        .grid__tablet--model &[class*="#{$grid-column-namespace}--"]{
+            display: inline-block;
+            width: 33%;
+        }
     	&[class*="#{$grid-column-namespace}--"]{
     		display: block;
     		margin-left: 0;
@@ -97,25 +101,36 @@
     		width: auto;
     	}
     }
-
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
+        .grid__tablet--model &[class*="#{$grid-column-namespace}--"]{
+            display: inline-block;
+            width: 50%;
+        }
+    }
+    @media (max-width: $breakpoint-medium){
+        .hide-on-mobile{ display: none !important; }
+        .__align--right{
+            margin: 0 !important;
+            margin-bottom: $baseline * .75 !important;
+            float:none;
+            width: 100%;
+        }
+        .__align--left{
+            margin: 0 !important;
+            margin-bottom: $baseline * .75 !important;
+            float:none;
+            width: 100%;
+        }
+        .grid__tablet--model &[class*="#{$grid-column-namespace}--"]{
+            display: block;
+            width: 100%;
+        }
+    }
     @media (max-width: $breakpoint-small) {
-      .hide-on-mobile{ display: none !important; }
-      .__align--right{
-        margin: 0;
-        margin-bottom: $baseline * .75;
-        float:none;
-        width: 100%;
-      }
-      .__align--left{
-        margin: 0;
-        margin-bottom: $baseline * .75;
-        float:none;
-        width: 100%;
-      }
-      .hero_cover{
-        width: $base-font-size * .95;
-        margin: $baseline (-$base-font-size) / 19;
-      }
+        .hero_cover{
+            width: $base-font-size * .95;
+            margin: $baseline (-$base-font-size) / 19;
+        }
         .hero__content{
             margin: $baseline * .25 $baseline * .5 !important;
         }
@@ -129,10 +144,10 @@
         }
     }
 
-    @media (max-width: $breakpoint-medium) and (min-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {
         .hero_cover{
-            width: $base-font-size * .9;
-            margin: $baseline (-$base-font-size) / 34;
+            width: $base-font-size;
+            margin: $baseline -$baseline;
         }
         .__align--right{
             margin-right: 0;
@@ -144,16 +159,16 @@
         }
     }
 
-	@media (min-width: $breakpoint-medium * 1.5){
+	@media (min-width: $breakpoint-large * 1.5){
         ._quote-popular{
-            font-size: $baseline * .65;
+            font-size: $baseline * 1;
         }
     }
 } 
 
 
 
-@media (max-width: $breakpoint-medium) {
+@media (max-width: $breakpoint-large) {
     .#{$grid-column-namespace}--bl{
       border-left: 0 !important;
       border-bottom: 1px solid $white-light;
@@ -167,9 +182,11 @@
 }
 
 .hero_cover{
-	width: $base-font-size * 1.1;
+	// width: $base-font-size * 1.1;
+    width: $container + $container / 4;
 	display: block;
-	margin: $baseline (-$base-font-size * 1.1) / 8;
+    left: 50%;
+	margin: $baseline ($container + $container / 4) / 4;
 	position: relative;
 	overflow: hidden;
 	&.hero__overlay--picture{
@@ -180,13 +197,14 @@
 			height: 100%;
 			top:0;
 			left:0;
-			background: darken(saturate($blue-dark,40%),42.5%);
-			opacity: .35;
+			background: darken(saturate($brown-dark, 40%), 40%);
+			opacity: .4;
 		}
 		& .hero__content{
 			position: absolute;
 			bottom: 0;
 			margin: $baseline * .75 $baseline;
+            font-family: $font-type-strong,$font-type-latin, Helvetica,Times,serif;
 			pointer-events: none;
 			&[dir=ltr]{
 				direction: ltr;
@@ -217,6 +235,8 @@
 .super--hero{
 	display: block;
 	margin: 0 auto;
+    width: 100%;
+    border-radius: $baseline / 6;
 }
 
 .__align--left {
@@ -226,6 +246,7 @@
 	margin-left: -15%;
 	margin-right: $baseline * .75;
 	margin-bottom: $baseline * .25;
+    img{ width: 100%; height: auto; }
 }
 
 .__align--right {
@@ -235,5 +256,9 @@
 	margin-right: -15%;
 	margin-left: $baseline * .75;
 	margin-bottom: $baseline * .25;
+    img{ width: 100%; height: auto; }
 }
 
+@media (max-width: $breakpoint-large){
+    .hide-on-large--size{ display: none; }
+}

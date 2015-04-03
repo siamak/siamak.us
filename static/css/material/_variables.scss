@@ -16,40 +16,65 @@ $grid-column-namespace : "grid__col";
 
 // Road: Grid system
 $gutter-width          : 20px;
-$breakpoint-medium     : 62rem;
-$breakpoint-small      : 30rem;
+$breakpoint-large      : 58rem;
+$breakpoint-medium     : 36rem;
+$breakpoint-small      : 20rem;
+$container			   : 42.5rem;
 
 // Road: Unit Sizes
-$base-font-size        : (19/16)*100%;
-$baseline-unitless     : 28/(13*($base-font-size/100%));
+$base-font-size        : (16/15)*100%;
+$baseline-unitless     : 16/(8*($base-font-size/100%));
 $baseline              : $baseline-unitless * 1rem;
 
 // Road: Fonts
-$font-type-regular     : "IranianSerifWeb-regular";
-$font-type-bold        : "IranianSerifWeb-bold";
-$font-type-strong      : "Mitra";
-$font-type-latin       : "Merriweather";
+$font-type-regular     		: "IranianSerifWeb-regular";
+$font-type-bold        		: "IranianSerifWeb-bold";
+$font-type-strong      		: "Mitra";
+$font-type-latin       		: "Merriweather";
+$font-type-latin-regular    : "Noto Sans";
 
 $font-sans             : $font-type-regular, $font-type-latin, Geneva, Verdana, sans-serif;
 $font-bold             : $font-type-strong, $font-type-latin, Georgia, serif;
 
 // Road: Base Colors
-$background            : #fcfcfc;
+$background            : lighten(#fcfcfc, 3%);
 
 $white-light           : darken(white,10%);
-$white-dark            : darken(white,22%);
-$dark-gray             : #333333;
+$white-dark            : darken(white,25%);
+$dark-gray             : darken(#c39761, 52.5%);
 $light-gray            : lighten($dark-gray,20%);
-$lighter-gray          : lighten($light-gray,20%);
+$lighter-gray          : lighten($light-gray,30%);
 $light-black           : lighten(black,15%);
+$social-colors		   : (instagram: #2B5A83, twitter: #55ACEE, github: #222222, codepen: #333333);
 
 
 // Road: Variety Colors
-$blue-dark             : lighten(#667480,12%);
-$highlight             : darken(#186FB6,1%);
-$highlight-hover       : lighten(adjust-hue($highlight,15deg),10%);
-$golden                : #FFD700;
-$golden-dark           : darken($golden,12.5%);
+$brown-dark            : lighten(#67625b,12%);
+$highlight             : darken(#c39761,1%);
+$highlight-hover       : lighten(adjust-hue($highlight,15deg), 5%);
+$golden                : gold;
+$golden-dark           : darken($golden, 8%);
 
 $first-color-404       : #222222;
 $second-color-404      : darken($first-color-404,10%);
+
+
+// Road: Color code
+
+$codeBackgroundColor	: #222222;
+$codePrimaryColor		: #e3e2e0;
+$codePln				: #e3e2e0;
+$codeStr				: #3bc7b8;
+$codeKwd				: #FF4E50;
+$codeCom				: #777777;
+$codeTyp				: #3bc7b8;
+$codeLit				: #c3cb4c;
+$codePun				: #e3e2e0;
+$codeOpn				: #e3e2e0;
+$codeClo				: #e3e2e0;
+$codeTag				: #FF4E50;
+$codeAtn				: #3bc7b8;
+$codeAtv				: #c3cb4c;
+$codeDec				: #3bc7b8;
+$codeVar				: #3bc7b8;
+$codeFun				: #FF4E50;

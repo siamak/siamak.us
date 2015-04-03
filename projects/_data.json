@@ -1,0 +1,64 @@
+{
+	"Bahman-jalali": {
+		"title": "Bahman Jalali",
+		"date": "November 03, 2014",
+		"link": {
+			"text": "See More...",
+			"url": "http://theartworkshow.ir/jalali/"
+		},
+		"cat": ["Front-End"],
+		"situation": "Alive",
+		"lead": "The official site Bahman Jalali Coding by Siamak Mokhtari. He was a renowned Iranian photographer who played a significant role in educating a new generation of Iranian photographers."
+	},
+	"TarlanParvaneh": {
+		"title": "Birthday Online",
+		"date": "July 09, 2013",
+		"cat": ["Front-End", "UI/UX", "PHP"],
+		"situation": "Dead",
+		"lead": "It has a Powerful CMS with PHP that it can launch Birthday Online with Funny features. It was launched first for <a href='http://fa.wikipedia.org/wiki/%D8%AA%D8%B1%D9%84%D8%A7%D9%86_%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87' title='Iranian Actress' target='_blank'>Tarlan Parvaneh</a>. The project is closed."
+	},
+	"AyandeBank": {
+		"title": "Ayande Bank (Por-Az-Zendegi)",
+		"date": "February 30, 2015",
+		"link": {
+			"text": "See More...",
+			"url": "http://az.ba24.ir"
+		},
+		"cat": ["Front-End", "Design", "PHP"],
+		"situation": "Alive",
+		"lead": "Por-Az-Zendegi is a Campaign for Iranian New Year of <a href='http://ba24.ir' target='_blank'>Ayandeh Bank</a> – A part of the government's privatization of the banking system. Means Future Bank is an Iranian banking establishment offering retail and commercial services."
+	},
+	"Siamak.us": {
+		"title": "Siamak.us",
+		"date": "April 03, 2015",
+		"link": {
+			"text": "See More...",
+			"url": "http://siamak.us"
+		},
+		"cat": ["UI/UX", "Front-End"],
+		"situation": "Alive",
+		"lead": "New Generation of <u>Siamak.us</u> with new things. Refresh Design of <a href='http://siamak.us/notes/' target='_blank'>Persian Notes</a> a good experience for readers with new Typography. It is also have Native–js without any extra js frameworks and I'm very excited for it."
+	},
+	"Baarande": {
+		"title": "Baarande",
+		"date": "August 13, 2014",
+		"link": {
+			"text": "See More...",
+			"url": "http://baarande.com"
+		},
+		"cat": ["Front-End", "UI/UX"],
+		"situation": "Alive",
+		"lead": "Community of Iranian Web developers and Websites. Baarande founded by <a href='http://twitter.com/fictionteam' target='_blank'>@FictionTeam</a> at Tehran. it's like baby-startup! We Try to Succeed with Passion."
+	},
+	"Licon": {
+		"title": "Licon — Pure icons CSS3",
+		"date": "June 19, 2014",
+		"link": {
+			"text": "Licon on Github",
+			"url": "https://github.com/siamakmokhtari/licon/"
+		},
+		"cat": ["CSS", "Design"],
+		"situation": "Alive",
+		"lead": "Licon is a simple, useful and lightness pack—icon that made with Pure CSS3. It has both Sass and LESS versions. Featured on <a href='http://smashingmagazine.com/smashing-newsletter-issue-111/#a4' target='_blank'>Smashing Magzine</a>, <a href='http://www.webdesignerdepot.com/2014/07/whats-new-for-designers-july-2014/' target='_blank'>Webdesignerdepot</a>, <a href='twitter.com/edgeanimate/status/484403690858479616' target='_blank'>Offical Adobe Edge Twitter</a>, etc. with 20,000 unique users (Google analytics)"
+	}
+}
