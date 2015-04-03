@@ -1,6 +1,0 @@
-@include font-face($font-type-regular,'../fonts/#{$font-type-regular}');
-@include font-face($font-type-bold,'../fonts/#{$font-type-bold}',700);
-
-@include font-face($font-type-strong,'../fonts/#{$font-type-strong}');
-
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,italic);
