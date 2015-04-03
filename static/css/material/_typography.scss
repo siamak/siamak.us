@@ -1,0 +1,122 @@
+//
+// 
+// Typography:
+// ==========
+//
+
+h1,
+.__huge{
+	font-family: $font-bold;
+	font-size:2.5rem;
+	font-weight: normal;
+	line-height: ($baseline * 1.75);
+	margin : $baseline / 3 0;
+}
+
+
+h2,
+.__large{
+	font-family: $font-bold;
+	font-size: 2rem;
+	font-weight: normal;
+	line-height: ($baseline * 1.25);
+    padding-top: $baseline / 3;
+	margin : $baseline / 2 0;
+}
+
+
+h3,
+.__medium{
+	font-family: $font-bold;
+	font-size: 1.75rem;
+	font-weight: normal;
+	line-height: ($baseline * 1);
+	margin: $baseline / 8 0;
+	* + & {
+    	padding-top: $baseline / 4;
+    	margin: $baseline / 4 0;
+	}
+}
+
+h4,
+.__slice{
+	font-family: $font-bold;
+	font-size:1.25rem;
+	font-weight: normal;
+	line-height: ($baseline * 1);
+	margin : $baseline / 4 0;
+}
+
+
+h5,
+.__small{
+	font-family: $font-bold;
+	font-size:1rem;
+	font-weight: normal;
+	line-height: ($baseline * .6);
+	margin : $baseline / 2 0;
+}
+
+.__little{
+	font-size: .75rem;
+}
+
+p,
+.__paragraph,
+h1, h2, h3, h4, h5{
+	@extend %if-letter-spacing-on;
+}
+
+
+blockquote,
+.__quote{
+	margin: $baseline-unitless + em ($baseline-unitless/2) + em;
+	font-size: ($baseline * .7);
+	position: relative;
+	color: $light-black;
+	text-align: center;
+	font-family: $font-type-strong,$font-type-latin, Helvetica, Times,serif;
+	font-weight:700;
+	@extend %if-letter-spacing-on;
+	& .quote-owner__gray{
+		display:block;
+		color: darken($white-dark, 15%);
+	}
+}
+
+
+hr{
+	border: 0;
+	width: ($baseline * 2.25);
+	height: 1px;
+	margin: $baseline auto;
+	background-color: $white-dark;
+	clear: both;
+	display:block;
+}
+
+
+.__align--left{
+	@extend %small-text;
+	color: $brown-dark;
+	display: block;
+	text-align: left;
+	direction: ltr;
+	& hr{
+		width: 100%;
+		margin: $baseline * .25 0;
+	}
+}
+.__align--right{
+	@extend %small-text;
+	color: $brown-dark;
+	margin-top: $baseline * .25;
+	display: block;
+	text-align: right;
+	@extend %if-letter-spacing-on;
+	& hr{
+		width: 100%;
+		margin: $baseline * .25 0;
+	}
+}
+

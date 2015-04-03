@@ -1,0 +1,38 @@
+if current.source != "rss" && current.source != "sitemap"
+    !!!
+    html(lang="en")
+        head
+            != partial("_require/header")
+        
+        body(class="page-#{ current.path[0] }" id="#{ current.source }")
+
+        if current.path[0] == "index"
+            != partial("_require/main")
+
+        if current.path[0] != "index" && current.path[0] != "404"
+            != partial("_require/headline")
+            if current.source == 'index'
+                main.__container.main__articles(role="main")
+                    != yield
+
+            if current.path[0] == 'notes' && current.source != 'index'
+                != partial(current.path[0] + "/_nest", { yield: yield })
+
+
+            != partial("_require/footer")
+        
+        if current.path[0] === "404"
+            != yield
+
+        if current.path[0] == "notes"
+            if disqus
+                != partial("_require/comment-count")
+
+        if current.path[0] != "404" && current.path[0] != "index"
+            if includes
+                != partial("_require/includes")
+
+        if analytics
+            != partial("_require/analytics")
+else
+    != yield

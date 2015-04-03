@@ -1,0 +1,23 @@
+notes = []
+for post, slug in public.notes._data
+    if post.date
+        - post.slug = slug
+        - notes.push(public.notes._data[slug])
+
+//- Iterate over the notes array
+each post, i in notes.sort(function(a,b){ a = new Date(a.date); b = new Date(b.date); return b>a?-1:b<a?1:0; }).slice(0, postlimit)
+    if post.slug == current.source
+        - prev = notes[i - 1]
+        - next = notes[i + 1]
+        nav.note__list-nav
+            h3 هم‌چنین بخوانید...
+            if next
+                .grid__col.grid__col--one-of-two
+                    a.note__list-link(href="#{ next.slug }", title="#{ next.title }")
+                        b قسمت بعدی
+                        span #{ next.title }
+            if prev
+                .grid__col.grid__col--one-of-two
+                    a.note__list-link(href="#{ prev.slug }", title="#{ prev.title }")
+                        b قسمت قبلی
+                        span #{ prev.title }

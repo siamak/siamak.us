@@ -1,0 +1,41 @@
+meta(charset="utf-8")
+if current.path[0] != "index"
+    title= locals.title ? title + " | " + site_title : site_title
+else
+    title Siamak Mokhtari | سیامک مختاری
+
+meta(name="viewport", content="initial-scale=1.0, user-scalable=no, width=device-width")
+meta(name="author", content="#{ author }")
+
+meta(name="description", content="#{ description }")
+meta(name="keywords", content="#{ keywords }")
+
+meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+meta(name="apple-mobile-web-app-capable", content="yes")
+
+link(rel="stylesheet", href="/dist/css/main.css")
+link(rel="alternate", type="application/rss+xml", title="#{ site_title } RSS", href="#{site_url}/notes/rss.xml")
+link(rel="index", href="#{site_url}/sitemap.xml")
+link(rel='shortcut icon', href='/dist/img/favicon.jpg?ver=#{version}')
+link(rel="apple-touch-icon", href="/dist/img/touch-icon-iphone-retina.jpg?ver=#{version}")
+link(rel="apple-touch-icon", sizes="76x76", href="/dist/img/touch-icon-ipad.jpg?ver=#{version}")
+link(rel="apple-touch-icon", sizes="120x120", href="/dist/img/touch-icon-iphone-retina.jpg?ver=#{version}")
+link(rel="apple-touch-icon", sizes="152x152", href="/dist/img/touch-icon-ipad-retina.jpg?ver=#{version}")
+
+if current.path[0] == "index"
+    meta(property="og:site_name", content="Siamak Mokhtari | سیامک مختاری")
+else
+    meta(property="og:site_name", content=site_title)
+
+meta(property='og:description', content=description)
+meta(property='og:type', content=site_type)
+
+
+if current.path[0] == "notes"
+    meta(property='og:title', content=locals.title ? title + " | " + site_title : site_title)
+    meta(property='og:url', content=site_url + "/" + current.path[0] + "/" + current.path[1])
+
+meta(name="twitter:card", content="summary_large_image")
+meta(name="twitter:description", content=description)
+meta(name="twitter:image", content="#{site_url}/dist/img/favicon.jpg")
+meta(name='twitter:site', content="@" + twitter_account)

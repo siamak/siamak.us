@@ -1,0 +1,29 @@
+/*
+    {Licon} is a simple, useful and lightness pack-icon that made with Pure CSS3 by Siamak Mokhtari (@sia_mac) at @FictionTeam.
+    It has Sass version so it can easily be modified and merged into modern projects. 
+    It provides all the useful icons for good design without adding any images or fonts. 
+
+    Licon on github: [https://github.com/siamakmokhtari/licon/]
+*/
+
+$size: 24px; // licon on playground! (base on 32px).
+
+[class^="licon-"] {
+    display: inline-block; /* block, inline-block, inline-flex, table */
+    vertical-align: bottom;
+    position: relative;
+    font-style:normal;
+    &:before, &:after{
+        content:'';pointer-events: none;
+    }
+}
+
+.licon-arrowleft{
+    width: $size;height:$size;@include transform(scale(.7));
+    &:after{
+        position: absolute;width: $size/16;height: $size/2;right: $size/2;top: $size/4 + $size/16;background-color: $highlight;display: block;@include transform(rotate(-45deg));
+    }
+    &:before{
+        position: absolute;width: $size/16;height: $size/2;right: $size/2;top: 0;background-color: $highlight;display: block;@include transform(rotate(45deg));
+    }
+}
