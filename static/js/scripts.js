@@ -9,7 +9,8 @@
 
 //- Variables
 var el = document.querySelector('.wrapper--middle'),
-	eb = document.querySelector('.__ribbons');
+	eb = document.querySelector('.__ribbons'),
+	AnimScroll;
 
 //- is Mobile ?!
 var isMobile = {
@@ -36,7 +37,10 @@ var isMobile = {
 if(!isMobile.any()){
 	scrollStarted();
 }
-else{ stickyMobile(); }
+else{ 
+	document.body.className += " touch";
+	stickyMobile();
+}
 
 //- PageActive
 function setPageLoaded() {
@@ -51,27 +55,22 @@ setTimeout(setPageLoaded, 4500);
 }
 setTimeout(setOffRibbon, 100000);
 
-
 Please Down Edit!
 */
 
 
-// DOM Parser
 function DOMsParser(){
-    var string = document.getElementsByClassName('parser'),
-        parser = new DOMParser();
-
+    var string = document.getElementsByClassName('parser');
     for (var i = 0; i < string.length; ++i) {
-        var str = string[i].innerText;
+        var str = string[i].textContent,
+        	place = document.createElement('p');
+			place.innerHTML = str;
 
-        htmlDoc = parser.parseFromString(str, "text/html");
-        htmlDoc = htmlDoc.getElementsByTagName("body")[0].innerHTML;
-
-        string[i].innerHTML = htmlDoc;
+        string[i].innerHTML = '';
+		string[i].appendChild(place);
     }
 }
 DOMsParser();
-
 
 function stickyMobile(){
 	window.addEventListener('orientationchange', function(){
@@ -96,6 +95,38 @@ function stickyMobile(){
 	});
 }
 
+
+/*
+	– Using requestAnimationFrame (High Performance)
+	Polyfill: http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+*/
+
+(function() {
+    var lastTime = 0;
+    var vendors = ['webkit', 'moz'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame =
+          window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+
+
 function scrollStarted(){
 
 	window.addEventListener("resize", function(){
@@ -104,8 +135,8 @@ function scrollStarted(){
 
 	window.addEventListener("scroll", function(){
 		var currentScroll = window.scrollY,
-			slowScroll = currentScroll / 12 + 'px',
-			height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+			height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+			heightProject = document.querySelector('.projects').clientHeight;
 		
 		height = height - 50;
 
@@ -117,14 +148,24 @@ function scrollStarted(){
 			document.querySelector('.title__float').classList.remove("here");
 		}
 
-		el.style.transform = "translateY("+slowScroll+")";
-		el.style.opacity   = 1 - (currentScroll / 350);
-		// eb.style.opacity = 1 - (currentScroll / 150);
+		if(currentScroll > (height + heightProject - (heightProject/ 4))){
+			document.querySelector('.title__float').classList.remove("here");
+		}
+
+		requestAnimationFrame(Scroller);
 	});
 
 }
 
 
+function Scroller(){
+	var currentScroll = window.scrollY,
+		slowScroll = currentScroll / 12 + 'px';
+
+	el.style.transform = "translateY("+slowScroll+")";
+	el.style.opacity   = 1 - (currentScroll / 350);
+	AnimScroll = requestAnimationFrame(Scroller);
+}
 
 
 function showRSS(username, type) {
